@@ -28,3 +28,36 @@ if list1!=[]:
     print('Bad word')
 else:
     print('Good word')
+    
+    #Keyboard Letters
+#Given an  English word,  write an algorithm and the subsequent Python code to
+#check if the given word can be typed using just a single row of the keyboard.
+#(e.g. POTTER, EQUITY). Print 'Yes' if the letters of the word are from a single
+#row and print 'No' otherwise.
+
+#Input format:
+
+#A word
+
+#Output format:
+
+#Print ‘Yes’ if all letters of the word are from same row in a keyboard
+list1=['Q','W','E','R','T','Y','U','I','O','P','q','w','e','r','t','y','u','i','o','p']
+list2=['A','S','D','F','G','H','J','K','L','a','s','d','f','g','h','j','k','l']
+list3=['Z','X','C','V','B','N','M','z','x','c','v','b','n','m']
+row1=set(list1)
+row2=set(list2)
+row3=set(list3)
+n=input('enter the word')
+list4=[]
+for i in n:
+    list4.append(i)
+a=set(list4)
+if a.issubset(row1):
+    print('Yes')
+elif a.issubset(row2):
+    print('Yes')
+elif a.issubset(row3):
+   print('Yes')
+else:
+    print('No')
