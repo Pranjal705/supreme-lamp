@@ -1,0 +1,20 @@
+#Finding a Friend with Longest Name
+#Write an algorithm and the subsequent Python program to store the names
+#of your friends, count the number of friends, identify the longest name and
+#the number of letters in the longest name. Get the names of friends till 'Stop'
+#is entered. For example, if the input sequence is Ravi, Raj, Puela, Stop,
+#then the output is 3, Puela and 5.
+list1=[]
+for i in range(1,101):
+    n=input('enter the name')
+    if n=='Stop':
+        break
+    list1.append(n)
+list2=[]
+for i in list1:
+    list2.append(len(i))
+print(len(list2))
+maxi=max(list2)
+ind=list2.index(maxi)
+print(list1[ind])
+print(maxi)
