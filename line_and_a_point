@@ -1,0 +1,17 @@
+#Line and a Point
+#Consider a line with equation 5*x + 10*y - 20 =0, given a point (x,y),
+#write a Python code to check if it lies either on the line or on the left side or on the right side of the line.
+#A point (x1,y1)  is said to lie on the line if 5*x1+10*y1-20 = 0 and the point lies on left side if 5*x1+10*y1-20 < 0
+#and the point lies on the right side of the line if 5*x1+10*y1-20  > 0.
+a=int(input('enter the x-coordinate of the point'))
+b=int(input('enter the y-coordinate of the point'))
+f=5*a
+g=10*b
+i=20
+j=f+g-i
+if j==0:
+    print('On')
+elif j<0:
+    print('Left')
+else:
+    print('Right')
