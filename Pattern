@@ -1,0 +1,10 @@
+#Given a value 'n', write an algorithm and Python code to print a decreasing patter as follows. When n is 5, the pattern looks as below:
+
+#*****
+#****
+#***
+#**
+#*
+n=int(input('enter a positive integer'))
+for i in range(n,0,-1):
+    print('*'*i)
