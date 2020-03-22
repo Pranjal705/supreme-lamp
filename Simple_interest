@@ -1,0 +1,11 @@
+#Given the principal(p),rate of interest (r) in percentage and number of years (n) to be invested.
+#Write an algorithm and Python code to print the total amount that will be given after 'n' years. Formula to calculate simple interest is pnr/100.
+
+#For example, if principal is 1000, rate of interest is 15% and number of years 
+
+P=int(input('enter the principal amount: '))
+r=int(input('enter the rate of interest'))
+n=int(input('enter the number of years'))
+I=(P*n*r)/100
+A=P+I
+print(f'The amount to be paid after {n} years is: {A}')
