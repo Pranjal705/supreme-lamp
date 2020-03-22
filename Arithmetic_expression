@@ -1,0 +1,22 @@
+#Write a python script to read a number from the user,
+#find the difference between the sum of squares up to that number and the number itself. 
+
+#Input:
+
+#Number
+
+#Output:
+
+#Difference between the sum of squares up to that number and itself. 
+
+#For example if a number is 3, then output will be 11 ( i.e 1 2 + 2 2 + 3 2   - 3 = 11)
+
+#CODE
+
+n=int(input('enter the number'))
+sum1=0
+for i in range(1,n+1):
+    sq=i**2
+    sum1=sum1+sq
+o=sum1-n
+print(o)
