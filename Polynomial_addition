@@ -1,0 +1,67 @@
+#Write an algorithm and the subsequent Python program to add the two given polynomials. Assume that the coefficients of each polynomial are stored in a separate list.
+
+#Eg: 4x3 + 3x + 1 can be stored as [4,0,3,1]
+
+#2x2 - 3x - 4 can be stored as [2,-3,-4]
+
+#Output is [4, 2, 0, -3]
+
+#Input Format:
+
+#First line contains the degree of the first polynomial
+
+#Next line contains the coefficient of xn
+
+#Next line contains the coefficient of xn-1
+
+#...
+
+#Next line contains the coefficient of x0
+
+#Next line contains the degree of the second equation
+
+#Next line contains the coefficient of xn
+
+#Next line contains the coefficient of xn-1
+
+#...
+
+#Next line contains the coefficient of x0
+
+#Output Format:
+
+#Coefficients as a list from the highest degree to the lowest degree
+
+
+
+d1=int(input('enter the degree of first equation'))
+list1=[]
+for i in range(d1+1):
+    c=int(input('enter the coefficient'))
+    list1.append(c)
+print(list1)
+d2=int(input('enter the degree of second equation'))
+list2=[]
+for i in range(d2+1):
+    c1=int(input('enter the coefficient'))
+    list2.append(c1)
+print(list2)
+if len(list1)!=len(list2):
+    if len(list2)<len(list1):
+        x=len(list1)-len(list2)
+        for i in range(x):
+            list2.insert(0,0)
+    elif len(list1)<len(list2):
+        y=len(list2)-len(list1)
+        for i in range(y):
+            list1.insert(0,0)
+print(list1)
+print(list2)
+list1.reverse()
+list2.reverse()
+list3=[]
+for i in range(len(list1)):
+    sum2=list1[i]+list2[i]
+    list3.append(sum2)
+list3.reverse()
+print(list3)
