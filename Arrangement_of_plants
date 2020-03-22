@@ -1,0 +1,31 @@
+#Arrangement of Plants
+#A gardener has the practice of assigning ID to the plants during plantation.
+#One day, he makes a note of the heights of plants in his garden.
+#He writes the height of the plant against the ID of the plant.
+#He then instructs his employee to keep the plants, in ascending order of
+#its height. Design an algorithm and write the Python code to display the list
+#of ID numbers of plants in ascending order of their height.
+#IDs are also numbers. Check for boundary conditions and print 'Invalid input'
+#for wrong input. For example, if there are three trees with IDs as
+#175, 160, 120 and height as 47, 73 and 23 then the output should be
+#[120, 175, 160].
+import operator
+n=int(input('enter the no. of the plants'))
+if n<0:
+    print('Invalid input')
+else:
+    thisdict={}
+    for i in range(n):
+        ids=int(input('enter the id of the  plant'))
+        h=int(input('enter the height of the plant'))
+        if ids<0 or h<0:
+            print('Invalid Input')
+        else:
+            thisdict[ids]=h
+print(thisdict)
+sorted_dict=sorted(thisdict.items(), key=operator.itemgetter(1))
+print(sorted_dict)
+list1=[]
+for i in range(len(sorted_dict)):
+    list1.append(sorted_dict[i][0])
+print(list1)
