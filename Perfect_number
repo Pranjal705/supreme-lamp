@@ -1,0 +1,14 @@
+#Given a number 'n', write a Python code to check if it is a perfect number.
+#A number is said to be a perfect number if it is equal to its sum of its good factors.
+#All factors of 'n' excluding itself are good factors of a number.
+#For example, 6 is  a perfect number as 1+2+3 = 6
+
+k=int(input('enter the number'))
+sum2=0
+for i in range(1,k):
+    if k%i==0:
+        sum2+=i
+if sum2==k:
+    print("yes")
+else:
+    print('No')
