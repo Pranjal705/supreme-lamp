@@ -1,0 +1,15 @@
+#Given a number 'n', write a Python code to find sum of digits. For example if n is 564 then sum = 5+6+4 = 15
+
+a=input('enter the number')
+a1=str(a)
+if a1.isnumeric():
+    l=[]
+    for i in range(0,len(a1)):
+        l.append(a1[i])
+        sum=0
+    for i in l:
+        n=int(i)
+        sum=sum+n
+    print(sum)
+else:
+    print('invalid input')
