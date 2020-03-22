@@ -1,0 +1,47 @@
+#Given three words, write an algorithm and the subsequent Python code to
+#identify the following letters:
+
+#Letters common to all the three words
+#Letters in first two words but not in third word
+#Letters in first word but not in second and third word
+#Letters in all the three words
+#For example, if the words are apple, camel, element then letters in common to
+#all the three words -  i, e
+
+#Letters in first two words but not in third word – a
+
+#Letters in first word but not in second and third word  - p
+
+#Letters in all the three words – a, p, p, l, e, c, m, n, t
+
+w1=input('enter the word 1: ')
+w2=input('enter the word2: ')
+w3=input('enter the word3: ')
+a=set()
+b=set()
+c=set()
+for i in w1:
+    a.add(i)
+for j in w2:
+    b.add(j)
+for k in w3:
+    c.add(k)
+d=a.intersection(b)
+e=d.intersection(c)
+k=list(e)
+k.sort()
+print(k)
+f=a.intersection(b)
+j=f.difference(c)
+l=list(j)
+l.sort()
+print(l)
+g=b.union(c)
+h=a.difference(g)
+m=list(h)
+m.sort()
+print(m)
+i=a|b|c
+n=list(i)
+n.sort()
+print(n)    
